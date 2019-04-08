@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import logo from '../logo.svg';
 import './App.css';
-import Nav from './Nav';
+import Navbar from './Navbar';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Nav />
+        <Navbar />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p> This is the start of GIAA Fantasy. </p>
