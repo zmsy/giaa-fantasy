@@ -1,0 +1,34 @@
+@import '../variables.scss';
+
+.Navbar-logo {
+  margin-right: 1rem;
+  margin-left: 1rem;
+  max-height: 4rem;
+  max-width: 4rem;
+}
+
+.Navbar-text {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.Navbar-brand-text {
+  font-family: 'Oswald';
+  font-weight: 700;
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+
+.Navbar-red {
+  color: $red;
+}
+
+.Navbar-right {
+  flex-direction: row;
+}
+
+.Navbar-item-right {
+  margin-left: 1em;
+  margin-right: 1em;
+}
