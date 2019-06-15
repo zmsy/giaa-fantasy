@@ -5,15 +5,16 @@ import './Navbar.scss'
 class Navbar extends React.Component {
   render() {
 
-    // let navElements = [
-    //   ["Players", "/players"],
-    //   ["Squads", "/squads"],
-    //   ["Matchups", "/matchups"]
-    // ];
-
-    // for (let entry of navElements) {
-    //   console.log(entry);
-    // }
+    let navLinks = [
+      ["Players", "/players"],
+      ["Squads", "/squads"],
+      ["Matchups", "/matchups"]
+    ];
+    const navBarEntries = navLinks.map( (i) =>
+      <li className="nav-item Navbar-item-right">
+        <a className="nav-link" href={i[1]}>{i[0]}</a>
+      </li> 
+    );
 
     return (
       <nav className="navbar navbar-light">
@@ -22,15 +23,7 @@ class Navbar extends React.Component {
           <span className="Navbar-brand-text">GIAA <span className="Navbar-red">Fantasy Baseball</span></span>
         </a>
           <ul className="navbar-nav ml-auto Navbar-right">
-            <li className="nav-item Navbar-item-right">
-              <a className="nav-link">Players</a>
-            </li>
-            <li className="nav-item Navbar-item-right">
-              <a className="nav-link">Squads</a>
-            </li>
-            <li className="nav-item Navbar-item-right">
-              <a className="nav-link">Matchups</a>
-            </li>
+            {navBarEntries}
           </ul>
       </nav>
     );
