@@ -10,10 +10,10 @@ class Navbar extends React.Component {
       ["Squads", "/squads"],
       ["Matchups", "/matchups"]
     ];
-    const navBarEntries = navLinks.map( (i) =>
+    const navBarEntries = navLinks.map((i) =>
       <li className="nav-item Navbar-item-right">
         <a className="nav-link" href={i[1]}>{i[0]}</a>
-      </li> 
+      </li>
     );
 
     return (
@@ -22,9 +22,9 @@ class Navbar extends React.Component {
           <img src={giaaLogo} className="Navbar-logo" alt="" />
           <span className="Navbar-brand-text">GIAA <span className="Navbar-red">Fantasy Baseball</span></span>
         </a>
-          <ul className="navbar-nav ml-auto Navbar-right">
-            {navBarEntries}
-          </ul>
+        <ul className="navbar-nav ml-auto Navbar-right">
+          {navBarEntries}
+        </ul>
       </nav>
     );
   }
