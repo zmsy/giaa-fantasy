@@ -8,7 +8,8 @@ class Navbar extends React.Component {
     let navLinks = [
       ["Players", "/players"],
       ["Squads", "/squads"],
-      ["Matchups", "/matchups"]
+      ["Matchups", "/matchups"],
+      ["About", "/about"]
     ];
     const navBarEntries = navLinks.map((i) =>
       <li className="nav-item Navbar-item-right">
