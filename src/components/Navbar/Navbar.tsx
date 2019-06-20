@@ -1,5 +1,5 @@
 import React from 'react';
-import giaaLogo from '../branding/giaa-logo.svg';
+import giaaLogo from '../../branding/giaa-logo.svg';
 import './Navbar.scss'
 
 class Navbar extends React.Component {
@@ -19,7 +19,7 @@ class Navbar extends React.Component {
 
     return (
       <nav className="navbar navbar-light">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/">
           <img src={giaaLogo} className="Navbar-logo" alt="" />
           <span className="Navbar-brand-text">GIAA <span className="Navbar-red">Fantasy Baseball</span></span>
         </a>
