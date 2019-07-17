@@ -13,7 +13,7 @@ class Navbar extends React.Component {
     ];
 
     const navBarEntries = navLinks.map((i) =>
-      <li className="nav-item Navbar-item-right">
+      <li key={i[1].toString()} className="nav-item Navbar-item-right">
         <a className="nav-link" href={i[1]}>{i[0]}</a>
       </li>
     );

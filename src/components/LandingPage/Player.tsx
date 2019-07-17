@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 
-type PlayerProps = {
+export type PlayerProps = {
   id: number,
   fullName: string,
   position: string,
@@ -9,6 +9,4 @@ type PlayerProps = {
   percentStarted: number
 }
 
-const Player: FunctionComponent<PlayerProps> = (p: PlayerProps) => <p>{p.fullName} - {p.team}</p>
-
-export default Player;
+export const Player: FunctionComponent<PlayerProps> = (p: PlayerProps) => <p>{p.fullName} - {p.team}</p>

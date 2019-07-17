@@ -1,10 +1,12 @@
 import React from 'react';
-import PlayerProps from './Player'
 import { Jumbotron } from 'react-bootstrap';
+import { Player, PlayerProps }  from './Player';
+
+// /Users/zach/x/giaa-fantasy/src/components/LandingPage/Player.tsx
 
 type LandingPageProps = {
   players: number
-  playerList: typeof PlayerProps[]
+  playerList: PlayerProps[]
 }
 
 class LandingPage extends React.Component<LandingPageProps> {
@@ -22,6 +24,9 @@ class LandingPage extends React.Component<LandingPageProps> {
     return (
       <Jumbotron fluid>
         <h1>Hello world!</h1>
+        this.props.playerList.forEach(element => {
+          // <Player />
+        });
       </Jumbotron>
     );
   }
