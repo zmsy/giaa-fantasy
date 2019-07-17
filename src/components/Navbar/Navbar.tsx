@@ -11,6 +11,7 @@ class Navbar extends React.Component {
       ["Matchups", "/matchups"],
       ["About", "/about"]
     ];
+
     const navBarEntries = navLinks.map((i) =>
       <li className="nav-item Navbar-item-right">
         <a className="nav-link" href={i[1]}>{i[0]}</a>

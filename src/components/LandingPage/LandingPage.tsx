@@ -1,7 +1,23 @@
 import React from 'react';
+import PlayerProps from './Player'
 import { Jumbotron } from 'react-bootstrap';
 
-class LandingPage extends React.Component<any, any> {
+type LandingPageProps = {
+  players: number
+  playerList: typeof PlayerProps[]
+}
+
+class LandingPage extends React.Component<LandingPageProps> {
+
+  static defaultProps = {
+    players: 0,
+    playerList: []
+  }
+
+  componentDidMount() {
+    console.log("Component mounted successfully!");
+  }
+
   render() {
     return (
       <Jumbotron fluid>
