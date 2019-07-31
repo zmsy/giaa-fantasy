@@ -1,11 +1,10 @@
 import React from 'react';
 import { Jumbotron } from 'react-bootstrap';
-import { /*Player,*/ PlayerProps }  from './Player';
+import { Player, PlayerProps }  from './Player';
 
 interface LandingPageProps {}
 
 interface LandingPageState {
-  players: number,
   playerList: Array<PlayerProps>
 }
 
@@ -14,12 +13,11 @@ class LandingPage extends React.Component<LandingPageProps, LandingPageState> {
   constructor(props: any) {
     super(props);
     this.state = {
-      players: 0,
       playerList: new Array<PlayerProps>()
     }
   }
 
-  componentDidMount() {
+  componentWillMount() {
     console.log("Component mounted successfully!");
     this.getPlayers(12);
   }
@@ -28,18 +26,18 @@ class LandingPage extends React.Component<LandingPageProps, LandingPageState> {
     let response = await fetch("http://localhost:8000/api/players/" + playerId)
     let data = await response.json();
     let player = data.data as PlayerProps;
-    this.state.playerList.push(player);
-    console.log(data);
-    return data;
+    let newPlayerList = new Array<PlayerProps>();
+    newPlayerList.push(player);
+    this.setState({playerList: newPlayerList});
   }
 
   render() {
     return (
       <Jumbotron fluid>
         <h1>Hello world!</h1>
-        {this.state.playerList.forEach(element => {
-          // <Player />
-        })}
+          {this.state.playerList.forEach(i => {
+            return <Player key={i.fullName} {...i}/>
+          })}
       </Jumbotron>
     );
   }
