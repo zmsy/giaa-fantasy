@@ -1,8 +1,8 @@
 import React from 'react';
 import { Jumbotron } from 'react-bootstrap';
-import { Player, PlayerProps }  from './Player';
+import { Player, PlayerProps } from './Player';
 
-interface LandingPageProps {}
+interface LandingPageProps { }
 
 interface LandingPageState {
   playerList: Array<PlayerProps>
@@ -28,16 +28,18 @@ class LandingPage extends React.Component<LandingPageProps, LandingPageState> {
     let player = data.data as PlayerProps;
     let newPlayerList = new Array<PlayerProps>();
     newPlayerList.push(player);
-    this.setState({playerList: newPlayerList});
+    this.setState({ playerList: newPlayerList });
   }
 
   render() {
     return (
       <Jumbotron fluid>
         <h1>Hello world!</h1>
-          {this.state.playerList.forEach(i => {
-            return <Player key={i.fullName} {...i}/>
-          })}
+        <ul>
+          {this.state.playerList.map((i) =>
+            <Player key={i.fullName} {...i} />
+          )}
+        </ul>
       </Jumbotron>
     );
   }

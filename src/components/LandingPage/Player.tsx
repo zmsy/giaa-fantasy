@@ -4,9 +4,9 @@ export type PlayerProps = {
   id: number,
   fullName: string,
   position: string,
-  team: string,
+  team: number,
   percentOwned: number,
   percentStarted: number
 }
 
-export const Player: FunctionComponent<PlayerProps> = (p: PlayerProps) => <p>{p.fullName} - {p.team}</p>
+export const Player: FunctionComponent<PlayerProps> = (p: PlayerProps) => <li>{p.fullName} - {p.team}</li>
