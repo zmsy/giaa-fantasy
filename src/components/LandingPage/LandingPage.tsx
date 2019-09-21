@@ -61,7 +61,7 @@ class LandingPage extends React.Component<LandingPageProps, LandingPageState> {
           )}
         </ul>
         <ul>
-        {this.state.teamList.map((i) =>
+          {this.state.teamList.map((i) =>
             <Team key={i.name} {...i} />
           )}
         </ul>

@@ -1,21 +1,20 @@
 import React from 'react';
 import giaaLogo from '../../branding/giaa-logo.svg';
-import './Navbar.scss'
+import './Navbar.scss';
+import NavbarEntry from './NavbarEntry';
 
 class Navbar extends React.Component {
   render() {
 
     let navLinks = [
-      ["Players", "/players"],
-      ["Squads", "/squads"],
-      ["Matchups", "/matchups"],
-      ["About", "/about"]
+      {"name": "Players", "link": "/players"},
+      {"name": "Squads", "link": "/squads"},
+      {"name": "Matchups", "link": "/matchups"},
+      {"name": "About", "link": "/about"}
     ];
 
     const navBarEntries = navLinks.map((i) =>
-      <li key={i[1].toString()} className="nav-item Navbar-item-right">
-        <a className="nav-link" href={i[1]}>{i[0]}</a>
-      </li>
+      <NavbarEntry key={i.name} {...i} />
     );
 
     return (
