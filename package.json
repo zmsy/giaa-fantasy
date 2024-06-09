@@ -1,36 +1,29 @@
 {
   "name": "giaa-fantasy",
-  "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@types/bootstrap": "^4.5.0",
-    "@types/jest": "^26.0.0",
-    "@types/node": "^14.0.0",
-    "@types/react-dom": "^16.9.8",
-    "bootstrap": "^4.5.2",
-    "node-sass": "^4.14.1",
-    "react": "^16.13.1",
-    "react-bootstrap": "^1.3.0",
-    "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "^3.4.3",
-    "typescript": "^4.0.2"
-  },
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
   "devDependencies": {
-    "@types/react": "^16.9.49"
+    "@biomejs/biome": "^1.8.0",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "jest": "^29.7.0",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.0"
   }
 }

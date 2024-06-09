@@ -1,0 +1,43 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  margin: 1rem;
+  max-height: 4rem;
+  max-width: 4rem;
+}
+
+.navbar-text {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.navbar-left {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar-left-text {
+  font-family: 'Oswald';
+  font-weight: 700;
+  font-size: 1.5em;
+  vertical-align: middle;
+  width: 20rem;
+}
+
+.navbar-red {
+  color: var(--red);
+}
+
+.navbar-right {
+  flex-direction: row;
+}
+
+.navbar-item-right {
+  margin-left: 1em;
+  margin-right: 1em;
+}

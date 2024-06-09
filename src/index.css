@@ -1,9 +1,10 @@
-/* google fonts */
 @import url('https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto:400,700');
-@import 'variables.scss';
 
 html {
-  background-color: $white;
+  /** COLORS */
+  --red: #bb3629;
+  --white: hsl(34, 24, 92);
+  --black: hsl(34, 26, 9);
 }
 
 body {
@@ -12,5 +13,5 @@ body {
   font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Oxygen', 'Droid Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: $black;
+  color: var(--black);
 }
