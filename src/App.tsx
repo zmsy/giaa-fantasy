@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import './App.css';
-import { Navbar }  from './components/Navbar/Navbar';
-import { LandingPage } from './components/LandingPage/LandingPage';
+import React, { Component } from "react";
+import "./App.css";
+import { LandingPage } from "./components/LandingPage/LandingPage";
+import { NavMenu, Navbar } from "./components/Navbar/Navbar";
 
 export class App extends Component {
   render() {

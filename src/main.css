@@ -1,0 +1,8 @@
+/** Main CSS file. The `index.css` is for tailwind */
+:root {
+    --red: #bb3629;
+}
+
+* {
+    font-family: "Oswald", sans-serif;
+}
